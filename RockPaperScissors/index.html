@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>✌️ Rock Paper Scissors</title>
+  <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="asset/style.css" />
+</head>
+
+<body>
+  <section id="screen">
+    <h1 class="icon-list">
+      <img src="asset/img/heartBeat-2.gif" alt="">
+      Rock Paper Scissors
+    </h1>
+    <div class="nes-container is-rounded is-dark">
+      <article class="game">
+        <h2 class="a11y-hidden">게임 화면</h2>
+        <p class="pc item" data-item="item-pc">
+          <span class="a11y-hidden">컴퓨터</span>
+        </p>
+        <span>vs</span>
+        <p class="user item" data-item="item-user">
+          <span class="a11y-hidden">바위</span>
+        </p>
+      </article>
+
+
+      <div class="result">
+        <span>
+          <img src="asset/img/pc.png" alt="pcImg">
+          PC
+        </span>
+        <div class="nes-balloon from-left">
+          <span class="pc-score">0</span>
+        </div>
+        <div class="nes-balloon from-right">
+          <span class="user-score">0</span>
+        </div>
+        <span>
+          <img src="asset/img/user-1.png" alt="userImg" class="userImg">
+          YOU
+        </span>
+      </div>
+    </div>
+
+    <div class="nes-container is-rounded score hide">
+      <h2>
+        <img src="asset/img/user-0.png" alt="user">
+        <span></span>
+      </h2>
+      <button type="button" class="nes-btn is-error restart">One more game?</button>
+    </div>
+
+    <div class="selectItem">
+      <button class="nes-btn is-warning item-scissors" type="button" data-result="가위">
+        <span class="a11y-hidden">가위</span>
+      </button>
+      <button class="nes-btn is-primary item-rock" type="button" data-result="바위">
+        <span class="a11y-hidden">바위</span>
+      </button>
+      <button class="nes-btn is-success item-paper" type="button" data-result="보">
+        <span class="a11y-hidden">보</span>
+      </button>
+    </div>
+    </article>
+  </section>
+
+  <script src="asset/script.js"></script>
+</body>
+
+</html>
