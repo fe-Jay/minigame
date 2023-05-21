@@ -1,0 +1,144 @@
+:root {
+    --10size: clamp(0.6rem, 10vw, 1rem);
+    --15size: clamp(1rem, 15vw, 1.5rem);
+    --25size: clamp(1.5rem, 25vw, 2.5rem);
+    --30size: clamp(2rem, 30vw, 3rem);
+    --35size: clamp(2.5rem, 35vw, 3.5rem);
+}
+
+/* init */
+
+* {
+    box-sizing: border-box;
+    font: inherit;
+}
+
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 24px
+}
+
+body {
+    font-family: 'DungGeunMo', sans-serif;
+    background-color: #eae8e3;
+    color: #000;
+    letter-spacing: -0.1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 0;
+}
+
+h1 {
+    /* font-size: clamp(1.6rem, 5vw, 3.4rem); */
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+}
+
+h1 a,
+h1 a:hover,
+h1 a:active,
+h1 a:visited {
+    font: inherit;
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen {
+    html {
+        font-size: 12px;
+    }
+}
+
+
+/* component */
+
+
+#wrap {
+    width: min(100%, 800px);
+    padding: 80px 16px;
+    margin: 80px auto 0;
+}
+
+#wrap h2 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    padding: clamp(24px, 10vw, 40px) 0;
+}
+
+.main nav a {
+    width: min(100%, 400px);
+    display: inline-block;
+}
+
+.main nav a:hover {
+    color: inherit;
+}
+
+.main nav span {
+    display: block;
+    padding: 20px 0 0;
+}
+
+.main nav a img {
+    display: block;
+    width: 100%;
+}
+
+.nes-container {
+    margin: 0;
+}
+
+.nes-container.is-rounded {
+    flex-direction: column;
+    gap: 0px;
+    border-radius: 16px;
+}
+
+.nes-dialog.is-rounded {
+    padding: 40px 24px;
+    width: min(100%, 286px);
+}
+
+nav {
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a {
+    color: inherit;
+}
