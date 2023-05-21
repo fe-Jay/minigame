@@ -1,0 +1,108 @@
+/* Game wrap */
+#wrap .game>* {
+    flex: 1 0 0;
+    width: 100%;
+    text-align: center;
+}
+
+#wrap .game span {
+    flex-grow: 0;
+    font-size: 3rem;
+}
+
+
+#wrap .game,
+.result {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    padding: 24px;
+    border-radius: 20px;
+}
+
+
+/* Game Result */
+.result {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    align-items: flex-end;
+    padding: 0 0 24px;
+}
+
+.result .nes-balloon {
+    flex: 1 0 0;
+    padding: 0;
+    color: #000;
+}
+
+.result span {
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+}
+
+.result img {
+    display: block;
+    width: 48px;
+    margin: 0 auto;
+}
+
+.score {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+}
+
+*[class*="item-"] {
+    width: 6rem;
+    height: 6rem;
+    background-size: 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.selectItem,
+.score.nes-container.is-rounded {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 2px;
+}
+
+.selectItem {
+    margin: 24px 0 0;
+}
+
+
+/* Gama Item Select */
+.item-paper {
+    background-image: url('../asset/img/item-paper.png');
+}
+
+.item-rock {
+    background-image: url('../asset/img/item-rock.png');
+}
+
+.item-scissors {
+    background-image: url('../asset/img/item-scissors.png');
+}
+
+/*  Media query */
+@media (max-width:425px) {
+    #wrap {
+        padding: 20px;
+    }
+
+    .result span {
+        width: 48px;
+    }
+
+    .result img {
+        width: 32px;
+    }
+}
