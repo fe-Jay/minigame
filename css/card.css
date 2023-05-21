@@ -1,0 +1,104 @@
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.game-score {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nes-container.is-rounded {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    background: #fff;
+    border-radius: 0;
+    font-size: 40px;
+}
+
+.card {
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.25s linear;
+}
+
+.card img {
+    display: block;
+    width: 56px;
+}
+
+.card.shake {
+    animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0) rotateY(180deg);
+    }
+
+    20% {
+        transform: translateX(-13px) rotateY(180deg);
+    }
+
+    40% {
+        transform: translateX(13px) rotateY(180deg);
+    }
+
+    60% {
+        transform: translateX(-8px) rotateY(180deg);
+    }
+
+    80% {
+        transform: translateX(8px) rotateY(180deg);
+    }
+}
+
+.card div {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.25s linear;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /* transform: rotate(0); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card.show div {
+    /* pointer-events:none 속성으로 마우스 클릭, 드래그, 호버 등 이벤트를 중단시킨다. */
+    pointer-events: none;
+    user-select: none;
+    transition: transform 0.25s linear;
+}
+
+
+.card .front {
+    transform: rotateY(180deg);
+}
+
+.card .back {
+    transform: rotateY(0);
+    background-color: #000;
+    color: #fff;
+    font-size: 4rem;
+}
+
+.card.show {
+    transform: rotateY(180deg);
+}
+
+@media (max-width:425px) {
+    .game-board {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

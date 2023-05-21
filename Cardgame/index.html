@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤹🏻‍♀️ Card Game</title>
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/card.css" />
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="/minigame/">
+                <img src="../asset/img/logo.gif" alt="MINI GAME">
+                MINI GAME
+            </a>
+        </h1>
+    </header>
+
+    <section id="wrap">
+        <h2 class="icon-list">
+            <img src="../asset/img/heartBeat-5.gif" alt="Rock Paper Scissors">
+            Card Game
+        </h2>
+
+        <article class="game-score">
+            <h3>남은 시간...</h3>
+            <p class="game-timer"></p>
+        </article>
+
+        <div class="game-board">
+        </div>
+    </section>
+
+    <!-- Rounded dialog -->
+    <section>
+        <dialog class="nes-dialog is-rounded" id="dialog-default">
+            <form method="dialog">
+                <h3>
+                    <img src="../asset/img/result-win.gif" alat="게임결과">
+                    <span></span>
+                </h3>
+                <button type="submit" class="nes-btn is-error restart">One more game?</button>
+            </form>
+        </dialog>
+    </section>
+
+    <!-- <button type="button" class="nes-btn is-primary" onclick="endGame(failed);">
+        Open rounded dialog
+    </button> -->
+
+    <script src="../js/card.js"></script>
+</body>
+
+</html>
