@@ -50,10 +50,9 @@ const flipCard = (event) => {
 
 ### cardOne, cardTwo의 data-id 값이 같으면 equals() 함수 실행, 다르면 differs() 함수 실행.
 
-- 카드를 2번 클릭했을 때만 cardOne에 값이 들어가도록 cardOne이 비어있는지 확인한다.
-- cardOne, cardTwo의 data-idx 값을 가져와서 비교하는 matchCards() 함수를 실행한다.
-- 순차적으로 클릭을 진행할 수 있도록 clickPause가 false일 때만 비교를 실행한다.
-- Match되지 않으면 shake Css Animation 0.4초 동안 실행한 뒤 1초 후 뒤집힌 카드 원상복귀한다.
+- Match되면 클릭이벤트를 제거하고 MatchedCount를 1 증가시킨 후 초기화한다
+- Match되지 않으면 shake Css Animation을 0.4초 동안 실행한 뒤 1초 후 뒤집힌 카드 원상복귀한다.
+- Match된 카드가 6개가 되면 게임 종료 후 cardOne, cardTwo를 초기화한다.
 
 <br/>
 
@@ -92,7 +91,6 @@ function differs() {
 
 ### Match된 카드가 6개가 되거나, 게임 시작으로부터 30초가 지나면 게임 종료.
 
-- Match된 카드가 6개가 되면 게임 종료 후 cardOne, cardTwo 초기화한다.
 - 게임이 종료되면 clearInterval() 메서드로 타이머 제거 후 게임 재시작 팝업창을 띄운다.
 - 게임 결과에 따라 팝업창의 메시지와 이미지를 변경하고, 게임 결과에 따른 음악을 재생한다.
 
